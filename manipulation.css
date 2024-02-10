@@ -1,0 +1,165 @@
+body {
+  user-select: none;
+}
+
+#smooth-wrapper {
+  overflow-x: hidden;
+  z-index: 2;
+}
+
+@font-face {
+  font-family: san;
+  src: url(./assets/fonts/BECKETT.ttf);
+}
+
+@font-face {
+  font-family: gta;
+  src: url(./assets/fonts/pricedown.otf);
+}
+
+@font-face {
+  font-family: cond;
+  src: url(./assets/fonts/DispCond.ttf);
+}
+
+@font-face {
+  font-family: lato;
+  src: url(./assets/fonts/Lato-Light.ttf);
+}
+
+#nav-links-anchor {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sep-nav-tabs {
+  width: 2px;
+  height: 43px;
+  background-color: #ffffff;
+}
+
+.v__bo {
+  color: #2d2d2b;
+  font-size: 15px;
+  padding: 1vw 2.5vw;
+  border: 1px solid #2d2d2b;
+  transition: all ease-in-out 0.3s;
+  background-color: #2d2d2b25;
+  backdrop-filter: blur(40px);
+}
+
+.v__bo:hover {
+  color: #fff;
+  background-color: #903c02;
+}
+
+.swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgba(255, 255, 255, 0.656);
+}
+
+/* Custom styles for Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  background-color: #cec3b6;
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 13px;
+}
+
+/* Adjust arrow position */
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* .sepa {
+  overflow: hidden;
+  display: flex;
+  margin-top: 5vw;
+  width: 100%;
+}
+
+.sepa h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+  color: #322018;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} */
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.container {
+  margin-top: 7vw;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.horizontal-scrolling-items {
+  display: flex;
+  font-size: 40px;
+  width: 2600px;
+  animation-name: infiniteScroll;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.horizontal-scrolling-items__item {
+  z-index: 2;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #00000056;
+  color: #00000000;
+  font-weight: 700;
+  font-family: gilroy;
+  white-space: nowrap;
+  font-size: 10vw;
+  transition: all ease 0.5s;
+}
+
+.horizontal-scrolling-items__item:hover {
+  -webkit-text-stroke-color: #000000ce;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
